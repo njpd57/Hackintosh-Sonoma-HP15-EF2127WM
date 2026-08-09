@@ -18,6 +18,12 @@ August 9, 2026.
 - Display: 15.6-inch 1728x1080 eDP panel
 - SMBIOS: MacBookPro16,3
 
+OpenCore version: 1.0.7
+MacOS version: macOS Sonoma Versión 14.8.9 (Compilation 23J631)
+
+![About This Mac](Screenshots/notebook.png)
+
+
 ## Project Purpose
 
 This EFI is set up for running macOS with OpenCore on the hardware listed above. It includes the standard ACPI patches, kexts, and boot configuration needed for this specific AMD Renoir-based system.
