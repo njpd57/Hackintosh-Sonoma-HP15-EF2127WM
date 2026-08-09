@@ -74,6 +74,53 @@ The setup uses a standard AMD/Apple-friendly stack with:
 - SMCProcessor.kext
 - Various AMD power and sensor kexts
 
+## Renoir iGPU (Ryzen 5500U) 3D & WebGL Acceleration Fix
+
+Fixes 3D app/game crashes, WebGL freezes, and Firefox hardware-acceleration panics on macOS Sonoma when using NootedRed on AMD Renoir APUs.
+
+### 2. Increase VRAM / Framebuffer via SmokelessUMAF
+
+Laptops often hide the iGPU UMA Frame Buffer setting in the standard BIOS. Setting the VRAM to 1 GB or 2 GB via SmokelessUMAF resolves texture-allocation panics in NootedRed.
+
+#### 1. Format USB Drive
+
+1. Insert a USB flash drive into your computer.
+2. Format the drive as FAT32 (Master Boot Record or MBR scheme).
+
+#### 2. Download SmokelessUMAF
+
+1. Download the latest release from the `DavidS95/Smokeless_UMAF` GitHub repository.
+2. Extract the archive contents directly to the root of your FAT32 USB drive so that the `EFI` folder sits at the root (for example, `USB:/EFI/BOOT/bootx64.efi`).
+
+#### 3. Boot UMAF and Update UMA
+
+1. Reboot your laptop and open your boot menu (usually `F12`, `F8`, `F2`, or `Fn + F12`).
+2. Select and boot from the USB drive.
+3. Once the interface loads, navigate to: Device Manager -> AMD CBS -> NBIO Common Options -> GFX Configuration
+4. Set iGPU Configuration to `UMA_SPECIFIED`.
+5. Set UMA Frame Buffer Size to `2G` (or `1G` depending on total system memory).
+
+#### 4. Save and Reboot
+
+1. Press `Esc` to navigate back to the main menu.
+2. Select Save Changes and Reset (or press `Fn + F10` / `F10` if prompted to save).
+3. Reboot into macOS.
+
+### 3. Verify the Fix in macOS
+
+1. Open Terminal and run:
+
+```bash
+system_profiler SPDisplaysDataType | grep VRAM
+```
+
+2. Verify that VRAM (Total) displays 2 GB (or 1 GB).
+3. Test WebGL rendering by opening Firefox or Safari and navigating to [webglreport.com](https://webglreport.com).
+
+### 4. RAM & JVM Optimization Guidelines (8 GB Systems)
+
+Because 2 GB of physical RAM is strictly reserved for the iGPU framebuffer, your host OS has approximately 6 GB of usable RAM remaining.
+
 ## Notes
 
 - This configuration is tailored to the hardware detected in the provided system dump.
