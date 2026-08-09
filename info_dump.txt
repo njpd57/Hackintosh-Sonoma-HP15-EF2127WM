@@ -1,0 +1,95 @@
+─ CPU
+  └── AMD Ryzen 5 5500U with Radeon Graphics
+      ├── Cores: 6 cores
+      ├── Threads: 12 threads
+      ├── SSE: SSE4.2
+      └── SSSE3: Supported
+
+─ Vendor
+  ├── Model: MacBookPro16,3
+  └── Manufacturer: Acidanthera
+
+─ GPU
+  └── AMD Radeon Graphics
+      ├── Vendor ID: 0x1002
+      ├── Device ID: 0x164c
+      ├── PCI Path: PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x0)
+      ├── ACPI Path: \_SB.PCI0.GP17.VGA
+      └── Codename: Renoir
+
+─ Memory
+  ├── M471A5244CB0-CWE (Part-Number)
+  │   ├── Type: DDR4
+  │   ├── Slot
+  │   │   ├── Bank: P0 CHANNEL A
+  │   │   └── Channel: Bottom - Slot 1 (left)
+  │   ├── Frequency (MHz): 3200 MHz
+  │   ├── Manufacturer: Samsung
+  │   └── Capacity: 4096MB
+  └── M471A5244CB0-CWE (Part-Number)
+      ├── Type: DDR4
+      ├── Slot
+      │   ├── Bank: P0 CHANNEL B
+      │   └── Channel: Bottom - Slot 2 (right)
+      ├── Frequency (MHz): 3200 MHz
+      ├── Manufacturer: Samsung
+      └── Capacity: 4096MB
+
+─ Network
+  └── RTL8822CE 802.11ac PCIe Wireless Network Adapter
+      ├── Device ID: 0xc822
+      ├── Vendor: 0x10ec
+      ├── PCI Path: PciRoot(0x0)/Pci(0x2,0x2)/Pci(0x0,0x0)
+      └── ACPI Path: \_SB.PCI0.GPP4.WLAN
+
+─ Audio
+  ├── Renoir/Cezanne HDMI/DP Audio Controller
+  │   ├── Device ID: 0x1637
+  │   ├── Vendor: 0x1002
+  │   ├── PCI Path: PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x1)
+  │   └── ACPI Path: \_SB.PCI0.GP17.HDAU
+  ├── Audio Coprocessor
+  │   ├── Device ID: 0x15e2
+  │   ├── Vendor: 0x1022
+  │   ├── PCI Path: PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x5)
+  │   └── ACPI Path: \_SB.PCI0.GP17.ACP
+  └── Ryzen HD Audio Controller
+      ├── Device ID: 0x15e3
+      ├── Vendor: 0x1022
+      ├── PCI Path: PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x6)
+      └── ACPI Path: \_SB.PCI0.GP17.AZAL
+
+─ Input
+  ├── Magic Trackpad 2 (I2C)
+  │   ├── Device ID: 0x281
+  │   └── Vendor: 0x5ac
+  ├── Keyboard
+  │   ├── Device ID: 0xffff
+  │   └── Vendor: 0x5ac
+  ├── Keyboard (PS2)
+  │   ├── Device ID: 0xffff
+  │   └── Vendor: 0x5ac
+  ├── Mouse (I2C)
+  │   ├── Device ID: 0xffff
+  │   └── Vendor: 0x5ac
+  └── Mouse (PS2)
+      ├── Device ID: 0xffff
+      └── Vendor: 0x5ac
+
+─ Storage
+  └── ADATA SX8200PNP
+      ├── Type: Non-Volatile Memory Express (NVMe)
+      ├── Connector: PCI-Express
+      └── Location: Internal
+
+─ Displays
+  └── UNKNOWN DISPLAY DEVICE (AMD Radeon Graphics)
+      ├── Product ID: 0x1526
+      ├── Vendor ID: 0xdae
+      ├── Serial: 0x0
+      ├── Resolution: 1728x1080
+      ├── Size (in inches): 15”
+      ├── Display mode: Landscape
+      ├── Connector: LVDS/eDP
+      └── Aspect ratio: 16:10
+
